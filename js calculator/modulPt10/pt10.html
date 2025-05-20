@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pertemuan 10</title>
+  </head>
+  <body>
+    <p id="satu"></p>
+    <p id="dua"></p>
+    <p id="tiga"></p>
+    <button id="embed">embed</button>
+    <!-- Internal -->
+    <button onclick="document.getElementById('dua').innerText = 'Dua'">
+      inline
+    </button>
+    <button id="eksternal">eksternal</button>
+
+    <!-- Embed -->
+    <script>
+      const embed = document.getElementById("embed");
+      embed.addEventListener("click", function () {
+        const satu = document.getElementById("satu");
+        satu.innerText = "Satu";
+      });
+    </script>
+    <!-- Eksternal -->
+    <script src="pt10.js"></script>
+  </body>
+</html>
